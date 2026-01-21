@@ -145,6 +145,147 @@
     color: white;
 }
 
+/* Third  section /////////// Card Section Styling */
+
+.same-sec {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 60px 20px;
+}
+
+.same-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap; 
+    gap: 15px;
+}
+
+.same-head h2 {
+    font-family: var(--bigfont);
+    font-size: clamp(24px, 5vw, 36px); 
+    margin: 0;
+}
+
+.same-head .view {
+    border-radius: 8px;
+    border: none;
+    padding: 10px 25px;
+    background-color: #7C4EE4;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.same-head .view:hover {
+    background-color: #5a32b3;
+}
+
+.same-cards {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.card-img {
+    flex: 1;
+}
+
+.card-img img {
+    width: 100%;
+    height: auto;
+    max-width: 470px;
+    min-height: 310px;
+    border-radius: 20px;
+    display: block;
+}
+
+.card-text {
+    flex: 1;
+}
+
+.card-info {
+    font-size: 14px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.same-card {
+    color: #7C4EE4; 
+    margin-right: 15px;
+}
+
+.same-date {
+    color: #888;
+}
+
+.card-text h2 {
+    font-family: var(--bigfont);
+    font-size: clamp(20px, 4vw, 30px);
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.card-text p {
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.same-more-btn {
+    padding: 8px 25px;
+    background: transparent;
+    border: 1px solid #7C4EE4;
+    color: #7C4EE4;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.same-more-btn:hover {
+    background: #7C4EE4;
+    color: white;
+}
+
+/* --- RESPONSIVE SETTINGS --- */
+
+@media (max-width: 992px) {
+    .same-cards {
+        flex-direction: column;
+        text-align: left;
+    }
+    
+    .card-img, .card-text {
+        width: 100%;
+    }
+}
+
+@media (max-width: 320px) {
+    .same-sec {
+        padding: 30px 10px;
+    }
+    
+    .same-head {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .same-head .view {
+        width: 100%;
+    }
+
+    .card-text h2 {
+        font-size: 18px;
+    }
+
+    .card-text p {
+        font-size: 14px;
+    }
+}
+
 /* --- Blog Section Responsive --- */
 @media (max-width: 768px) {
     .card-content {
@@ -254,6 +395,8 @@
 
     .read-more-btn{
         margin: 0 auto;
+        text-align: center;
+        padding: 5 10px;
     }
 }
 
@@ -291,5 +434,11 @@
 
     .card-content p{
         font-size: 10px;
+    }
+
+    .read-more-btn{
+        margin: 0 auto;
+        text-align: center;
+        padding: 5px 5px;
     }
 }
