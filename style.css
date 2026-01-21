@@ -196,8 +196,6 @@
 .card-img img {
     width: 100%;
     height: auto;
-    max-width: 470px;
-    min-height: 310px;
     border-radius: 20px;
     display: block;
 }
@@ -250,6 +248,231 @@
     color: white;
 }
 
+.card-sec {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.custom-card {
+    border: none;
+    background: transparent;
+}
+
+.custom-card img {
+    border-radius: 20px;
+    width: 100%;
+    height: 220px;
+    object-fit: cover; 
+    margin-bottom: 15px;
+}
+
+.custom-card, .card-img, .recent-img-container, .card-img-box {
+    overflow: hidden;
+    border-radius: 20px; 
+}
+
+.custom-card img, .card-img img, .recent-img-container img, .card-img-box img {
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+
+.custom-card:hover img, 
+.card-img:hover img, 
+.recent-img-container:hover img, 
+.card-img-box:hover img {
+    transform: scale(1.1); 
+}
+
+.card-body-custom {
+    padding: 10px 0;
+}
+
+.meta-info {
+    font-size: 13px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.meta-info .category {
+    color: #333;
+    margin-right: 10px;
+}
+
+.meta-info .date {
+    color: #888;
+}
+
+.card-title {
+    font-family: var(--bigfont);
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.card-text {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.read-more-link {
+    color: #7C4EE4;
+    text-decoration: underline !important;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* --- Card sec --- */
+
+.card-sec-upr {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 10px 20px;
+} 
+
+.another-card{
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 10px 20px;
+}
+
+.newsletter-area {
+    background-color: #7C4EE4;
+    padding: 80px 0;
+    width: 100%;
+    margin: 0;
+    overflow: hidden; 
+}
+
+.newsletter-content h1 {
+    font-size: 2.0rem;
+    font-family: var(--bigfont);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.subscribe-box {
+    max-width: 550px;
+    width: 90%; 
+    margin: 0 auto;
+    background: white;
+    padding: 8px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.subscribe-box input {
+    border: none !important;
+    box-shadow: none !important;
+    padding-left: 15px;
+    flex: 1;
+}
+
+.btn-get-started {
+    background-color: #7C4EE4;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.social-circle {
+    width: 45px;
+    height: 45px;
+    background-color: #7C4EE4;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.social-circle:hover {
+    background-color: #5a32b3;
+    transform: scale(1.1);
+}
+
+footer.footer-area {
+    width: 100%;
+    padding: 60px 0;
+    margin: 0;
+    background-color: white;
+}
+
+.footer-line {
+    border-top: 1px solid rgba(0,0,0,0.1);
+    margin: 20px auto;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .newsletter-content h1 {
+        font-size: 1.8rem !important;
+        padding: 0 15px;
+    }
+    
+    .subscribe-box {
+        flex-direction: column;
+        background: transparent;
+        padding: 0;
+    }
+
+    .subscribe-box input {
+        width: 100%;
+        border-radius: 8px !important;
+        margin-bottom: 10px;
+        padding: 15px;
+        background: white;
+    }
+
+    .btn-get-started {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .newsletter-area { padding: 60px 20px; }
+    .newsletter-content h1 { font-size: 1.8rem; }
+    .subscribe-box { 
+        flex-direction: column; 
+        background: transparent; 
+        padding: 0;
+    }
+    .subscribe-box input {
+        border-radius: 10px !important;
+        margin-bottom: 10px;
+        padding: 15px;
+    }
+    .btn-get-started { width: 100%; padding: 15px; }
+}
+/* --- RESPONSIVE FIXES --- */
+
+@media (max-width: 768px) {
+    .custom-card img {
+        height: auto;
+    }
+}
+
+@media (max-width: 320px) {
+    .card-title {
+        font-size: 18px;
+    }
+    .card-text {
+        font-size: 14px;
+    }
+    .card-sec {
+        padding: 30px 10px;
+    }
+}
+
 /* --- RESPONSIVE SETTINGS --- */
 
 @media (max-width: 992px) {
@@ -284,7 +507,16 @@
     .card-text p {
         font-size: 14px;
     }
+
+    .card-title{
+        font-size: 15px;
+    }
+
+    .card-text, .read-more-link{
+        font-size: 12px;
+    }
 }
+
 
 /* --- Blog Section Responsive --- */
 @media (max-width: 768px) {
