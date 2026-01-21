@@ -1,0 +1,13 @@
+:root{
+    --font : "Macondo", cursive;
+    --bigfont : "Carter One", system-ui;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: var(--font);
+    text-decoration: none;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
